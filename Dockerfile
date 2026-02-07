@@ -14,11 +14,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 6️⃣ Expose Streamlit port
-EXPOSE 8501
+#EXPOSE 8501
 
 # 7️⃣ Streamlit config for Docker
-ENV STREAMLIT_SERVER_PORT=8501
+#ENV STREAMLIT_SERVER_PORT=8501
 ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
 
 # 8️⃣ Run the app
-CMD ["streamlit", "run", "app.py"]
+#CMD ["streamlit", "run", "app.py"]
+CMD ["sh", "-c", "streamlit run app.py --server.port=$PORT --server.enableCORS=false"]
