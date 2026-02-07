@@ -42,5 +42,9 @@ if city:
         st.write(f"Wind Speed: {wind_kph} kph")
 
     else:
-        st.error("City not found ❌") 
+        st.error("API Error")
+        st.write("Status code:", response.status_code)
+        st.write("Response:", response.text)
+
+
 
