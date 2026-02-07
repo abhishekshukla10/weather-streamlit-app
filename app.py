@@ -21,7 +21,7 @@ if city:
 
     "key": weather_api_key, 
 
-    "q": {city} 
+    "q": city
 
     } 
      # Use the get function from the requests library to store the response from the API 
